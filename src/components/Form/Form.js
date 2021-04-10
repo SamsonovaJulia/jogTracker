@@ -6,15 +6,14 @@ import "./Form.scss";
 
 function Form({ onClose }) {
   const dispatch = useDispatch();
-  const [distance, setDistanse] = useState();
-  const [time, setTime] = useState();
-  const [date, setDate] = useState();
+  const [distance, setDistanse] = useState("");
+  const [time, setTime] = useState("");
+  const [date, setDate] = useState("2017-06-01");
 
   // let jogs = useSelector((state) => state.jogs.jogs);
   // console.log("jogs", jogs);
 
-  const handleSubmit = () => {
-    
+  const handleSubmit = async () => {
     // let newId;
     // jogs.forEach((element) => {
     //   const getRundomInt = () => Math.floor(Math.random());
@@ -27,21 +26,21 @@ function Form({ onClose }) {
     // });
 
     const newJog = {
-      distance: distance,
-      time: time,
+      distance: parseFloat(distance, 10),
+      time: parseInt(time),
       date: date,
     };
     console.log("newJog", newJog);
-    dispatch(AddNewJogThunk, newJog);
+    await dispatch(AddNewJogThunk);
     onClose(false);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <a href="#" className="close" onClick={() => onClose(false)}></a>
       <div className="formInner">
         <div className="fild">
-          <label for="distance">Distance</label>
+          <label htmlFor="distance">Distance</label>
           <input
             id="distance"
             type="text"
@@ -51,7 +50,7 @@ function Form({ onClose }) {
           />
         </div>
         <div className="fild">
-          <label for="time">Time</label>
+          <label htmlFor="time">Time</label>
           <input
             id="time"
             type="text"
@@ -61,17 +60,20 @@ function Form({ onClose }) {
           />
         </div>
         <div className="fild">
-          <label for="date">Date</label>
+          <label htmlFor="date">Date</label>
           <input
             id="date"
             type="date"
             value={date}
-            placeholder="2018-07-22"
             name="date"
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
-        <input type="submit" value="Save" />
+        <input
+          type="button"
+          onClick={() => handleSubmit()}
+          defaultValue="Save"
+        />
       </div>
     </form>
   );
