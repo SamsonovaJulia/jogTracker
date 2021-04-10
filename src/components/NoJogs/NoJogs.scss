@@ -4,16 +4,13 @@
   transform: translate(0, -40%);
   p {
     font-size: 24px;
-    line-height: 1.21;
-    text-align: center;
     color: gray;
     margin-top: 47px;
   }
   .addNewJog {
-    width: 249px;
+    width: 333px;
     height: 60px;
     margin-top: 141px;
-    padding: 10px;
     border-radius: 36px;
     border: solid 3px #e990f9;
     color: #e990f9;
@@ -26,5 +23,11 @@
     &:hover {
       background-color: #cb29e7;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sadEmoticon {
+    width: 112px;
   }
 }

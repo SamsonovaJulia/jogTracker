@@ -19,8 +19,8 @@
 .logInButton {
   width: 151px;
   height: 60px;
-  margin: 56px 5px 0 4px;
-  padding: 20px 34px 19px;
+  margin-top: 56px;
+  padding: 10px;
   border-radius: 36px;
   border: solid 3px white;
   color: white;
@@ -33,4 +33,30 @@
   &:hover {
     background-color: #cb29e7;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .LoginForm {
+    background-color: white;
+  }
+  .bearFace {
+    fill: rgb(1, 1, 1);
+  }
+  .bearFace:hover {
+    fill: orange;
+  }
+
+  .logInButton {
+    border: solid 3px#e990f9;
+    color: #e990f9;
+    font-size: 18px;
+    background-color: white;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: #cb29e7;
+    }
+  }
+
 }

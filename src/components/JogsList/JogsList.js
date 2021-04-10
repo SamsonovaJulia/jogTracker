@@ -64,7 +64,7 @@ function JogsList() {
               <div className="jogsList">
                 {resultJogData.map((jogElem) => {
                   return (
-                    <div className="jogDescription" key={jogElem.id}>
+                    <div className="jogCard" key={jogElem.id}>
                       <img src={icon} className="jogIcon" />
                       <div className="description">
                         <p>

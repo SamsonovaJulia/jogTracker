@@ -1,7 +1,6 @@
 .infoPage {
   display: flex;
   flex-direction: column;
-  width: 614px;
   align-items: flex-start;
   margin: 85px;
 }
@@ -9,8 +8,6 @@
 h1 {
   font-size: 36px;
   color: #7ed321;
-  font-weight: bold;
-  text-align: start;
   margin: 0;
 }
 
@@ -19,4 +16,10 @@ h1 {
   font-size: 14px;
   line-height: 1.71;
   margin: 15px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .infoPage {
+    margin: 33px;
+  }
 }
