@@ -15,9 +15,7 @@ function Header() {
     (state) => state.filterIsActive.filterIsActive
   );
 
-  const isJogs = useSelector(
-    (state) => state.jogs.jogs
-  );
+  const isJogs = useSelector((state) => state.jogs.jogs);
 
   useEffect(() => {
     isJogs ? setIsLogedIn(true) : setIsLogedIn(false);
@@ -35,9 +33,15 @@ function Header() {
       {isLogedIn && (
         <div className="menuWrapper">
           <nav>
-            <Link to="/jogs">JOGS</Link>
-            <Link to="/info">INFO</Link>
-            <Link to="/contacts">CONTACT US</Link>
+            <Link className="one" to="/jogs">
+              JOGS
+            </Link>
+            <Link className="two" to="/info">
+              INFO
+            </Link>
+            <Link className="three" to="/contacts">
+              CONTACT US
+            </Link>
           </nav>
           {window.location.pathname === "/jogs" && (
             <img
