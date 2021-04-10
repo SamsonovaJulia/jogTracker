@@ -23,10 +23,9 @@ nav {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-  }
-  &:active {
-    background: #265301;
-    color: #cdfeaa;
+    &:hover {
+      text-decoration: underline 2px;
+    }
   }
 }
 

@@ -10,13 +10,18 @@ import { useSelector, useDispatch } from "react-redux";
 function Header() {
   const dispatch = useDispatch();
   const [isLogedIn, setIsLogedIn] = useState();
+
   const isUsingFilter = useSelector(
     (state) => state.filterIsActive.filterIsActive
   );
 
+  const isJogs = useSelector(
+    (state) => state.jogs.jogs
+  );
+
   useEffect(() => {
-    window.localStorage.access_token ? setIsLogedIn(true) : setIsLogedIn(false);
-  }, [window.localStorage]);
+    isJogs ? setIsLogedIn(true) : setIsLogedIn(false);
+  }, []);
 
   const toggleFilter = () => {
     dispatch(activateFilter(!isUsingFilter));
@@ -34,11 +39,13 @@ function Header() {
             <Link to="/info">INFO</Link>
             <Link to="/contacts">CONTACT US</Link>
           </nav>
-          <img
-            src={isUsingFilter ? filterActive : filter}
-            className={isUsingFilter ? "filterActive" : "filterNActive"}
-            onClick={toggleFilter}
-          ></img>
+          {window.location.pathname === "/jogs" && (
+            <img
+              src={isUsingFilter ? filterActive : filter}
+              className={isUsingFilter ? "filterActive" : "filterNActive"}
+              onClick={toggleFilter}
+            ></img>
+          )}
         </div>
       )}
     </header>
