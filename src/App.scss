@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "SFUIText";
+  src: url("./SFUIText-Bold.ttf");
+  src: url("./SFUIText-Regular.ttf");
+}
+
+.App {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}

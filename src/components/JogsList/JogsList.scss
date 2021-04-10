@@ -1,0 +1,64 @@
+.jogDescription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px;
+  font-size: 14px;
+  p {
+    margin: 0;
+  }
+}
+
+.jogsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.addJog {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+}
+
+input {
+  height: 31px;
+  margin: 0 45px 0 15px;
+  border-radius: 11px;
+  border: solid 1px #979797;
+  background-color: white;
+}
+
+label {
+  font-size: 13px;
+  color: #979797;
+}
+
+.jogsListWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}

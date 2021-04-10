@@ -1,0 +1,36 @@
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 380px;
+  border-radius: 14px;
+  margin-top: 150px;
+  background-color: #e990f9;
+}
+
+.bearFace {
+  width: 160px;
+  height: 150px;
+  margin: 0 0 56px;
+}
+
+.logInButton {
+  width: 151px;
+  height: 60px;
+  margin: 56px 5px 0 4px;
+  padding: 20px 34px 19px;
+  border-radius: 36px;
+  border: solid 3px white;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #e990f9;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: #cb29e7;
+  }
+}

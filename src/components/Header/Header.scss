@@ -1,0 +1,54 @@
+.logo {
+  width: 147px;
+  height: 56px;
+  margin: 0 37px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 116px;
+  background-color: #7ed321;
+}
+
+nav {
+  font-family: "SFUIText";
+
+  a {
+    margin: 0 20px;
+    color: white;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &:active {
+    background: #265301;
+    color: #cdfeaa;
+  }
+}
+
+.menuWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterActive {
+  width: 39px;
+  height: 39px;
+  margin: 0 20px;
+}
+.filterNActive {
+  width: 26px;
+  height: 26px;
+  margin: 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .class {
+    height: 600px;
+  }
+}

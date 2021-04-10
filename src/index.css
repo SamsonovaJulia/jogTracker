@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SFUIText";
+  src: url("./SFUIText-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "SFUIText";
+}
