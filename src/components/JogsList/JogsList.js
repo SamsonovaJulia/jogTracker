@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Form from "../Form/Form";
-import add from "./add.svg";
-import icon from "./icon.svg";
+import add from "../../assets/add.svg";
+import icon from "../../assets/icon.svg";
 import "./JogsList.scss";
 import NoJogs from "../NoJogs/NoJogs";
 

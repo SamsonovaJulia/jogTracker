@@ -30,6 +30,9 @@ form {
     border: solid 1px white;
     color: white;
     background-color: #7ed321;
+    &:disabled {
+      background: linear-gradient(#666666, #999999);
+    }
   }
 
   input[type="button"]:hover {
@@ -83,4 +86,17 @@ form {
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+.closeButton {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .close {
+    display: none;
+  }
+  .closeButton {
+    display: block;
+  }
 }

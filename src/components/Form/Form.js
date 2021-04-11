@@ -53,7 +53,12 @@ function Form({ onClose }) {
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
-        <input type="button" onClick={handleSubmit} defaultValue="Save" />
+        <input type="button" onClick={handleSubmit} defaultValue="Save" disabled={!distance || !time}/>
+        <input
+          type="button"
+          onClick={() => onClose(false)}
+          defaultValue="Close"
+        />
       </div>
     </form>
   );

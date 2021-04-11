@@ -1,0 +1,90 @@
+@media screen and (max-width: 768px) {
+  .closeMenu {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 27px;
+    height: 27px;
+    opacity: 0.8;
+    font-weight: bold;
+  }
+  .closeMenu:hover {
+    opacity: 1;
+  }
+  .closeMenu:before,
+  .closeMenu:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 27px;
+    width: 4px;
+    background-color: gray;
+  }
+  .closeMenu:before {
+    transform: rotate(45deg);
+  }
+  .closeMenu:after {
+    transform: rotate(-45deg);
+  }
+
+  .logoMobile {
+    width: 80px;
+    margin: 25px;
+  }
+
+  .logoLink {
+    align-self: flex-start;
+  }
+
+  .menuItems a {
+    margin: 0 20px;
+    color: black;
+    outline: none;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    &:hover,
+    &:active {
+      color: #7ed321;
+    }
+  }
+
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+  }
+
+  .burgerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
+  }
+
+  .burgerMenuWrapper {
+    display: flex;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  .hamitems {
+    display: none;
+  }
+  nav input:checked ~ .hamitems {
+    display: block;
+  }
+}

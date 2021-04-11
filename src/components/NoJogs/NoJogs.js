@@ -1,4 +1,4 @@
-import logo from "./sad-emoticon.svg";
+import logo from "../../assets/sad-emoticon.svg";
 import React, { useState } from "react";
 import "./NoJogs.scss";
 import Form from "../Form/Form";

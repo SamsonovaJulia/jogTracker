@@ -1,6 +1,7 @@
 @font-face {
   font-family: "SFUIText";
-  src: url("./SFUIText-Bold.ttf");
+  src: url("./assets/SFUIText-Bold.ttf");
+  src: url("./assets/SFUIText-Regular.ttf");
 }
 
 body {
