@@ -11,6 +11,8 @@
 }
 
 .bearFace {
+  background-image: url("./bear-face.svg");
+  background-color: #e990f9;
   width: 160px;
   height: 150px;
   margin: 0 0 56px;
@@ -40,10 +42,8 @@
     background-color: white;
   }
   .bearFace {
-    fill: rgb(1, 1, 1);
-  }
-  .bearFace:hover {
-    fill: orange;
+    background-image: url("./bearFace.png");
+    background-color: white;
   }
 
   .logInButton {
@@ -58,5 +58,4 @@
       background-color: #cb29e7;
     }
   }
-
 }

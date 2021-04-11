@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-// import { addNewJog } from "../../redux/actions/index";
-import AddNewJogThunk from "../../redux/thunks/jogListTunk";
+import { useDispatch } from "react-redux";
+import AddNewJogThunk from "../../redux/thunks/AddNewJogThunk";
 import "./Form.scss";
 
 function Form({ onClose }) {
@@ -10,28 +9,13 @@ function Form({ onClose }) {
   const [time, setTime] = useState("");
   const [date, setDate] = useState("2017-06-01");
 
-  // let jogs = useSelector((state) => state.jogs.jogs);
-  // console.log("jogs", jogs);
-
-  const handleSubmit = async () => {
-    // let newId;
-    // jogs.forEach((element) => {
-    //   const getRundomInt = () => Math.floor(Math.random());
-    //   let generatedId = getRundomInt();
-    //   if (generatedId !== element.id) {
-    //     newId = generatedId;
-    //   } else {
-    //     getRundomInt();
-    //   }
-    // });
-
+  const handleSubmit = () => {
     const newJog = {
       distance: parseFloat(distance, 10),
       time: parseInt(time),
       date: date,
     };
-    console.log("newJog", newJog);
-    await dispatch(AddNewJogThunk);
+    dispatch(AddNewJogThunk(newJog));
     onClose(false);
   };
 
@@ -69,11 +53,7 @@ function Form({ onClose }) {
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
-        <input
-          type="button"
-          onClick={() => handleSubmit()}
-          defaultValue="Save"
-        />
+        <input type="button" onClick={handleSubmit} defaultValue="Save" />
       </div>
     </form>
   );

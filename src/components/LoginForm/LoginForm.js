@@ -1,4 +1,3 @@
-import logo from "./bear-face.svg";
 import "./LoginForm.scss";
 import getToken from "../../helpers/getToken";
 import JogsListThunk from "../../redux/thunks/jogListTunk";
@@ -15,7 +14,7 @@ function LoginForm() {
   };
   return (
     <div className="LoginForm">
-      <img src={logo} className="bearFace" />
+      <div className="bearFace"></div>
       <button className="logInButton" onClick={logIn}>
         Let me in
       </button>
