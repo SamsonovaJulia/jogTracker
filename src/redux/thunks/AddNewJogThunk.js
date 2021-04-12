@@ -2,7 +2,6 @@ import { addNewJog } from "../actions/index";
 
 const AddNewJogThunk = (newJog) => {
   return (dispatch) => {
-    console.log("datanewJog");
     //   dispatch(toggleLoading(true));
     fetch("https://jogtracker.herokuapp.com/api/v1/data/jog", {
       method: "POST",
